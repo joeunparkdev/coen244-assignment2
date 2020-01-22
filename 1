@@ -1,0 +1,41 @@
+clang: warning: treating 'c-header' input as 'c++-header' when in C++ mode, this behavior is deprecated [-Wdeprecated]
+./car.hpp:5:10: warning: non-portable path to file '"vehicle.hpp"'; specified path differs in case from file name on disk [-Wnonportable-include-path]
+#include "Vehicle.hpp"
+         ^~~~~~~~~~~~~
+         "vehicle.hpp"
+In file included from ./car.hpp:5:
+./Vehicle.hpp:3:10: fatal error: 'date.hpp' file not found
+#include "date.hpp"
+         ^~~~~~~~~~
+1 warning and 1 error generated.
+In file included from ./cashpayment.hpp:4:
+In file included from ./payment.hpp:4:
+./payment.hpp:17:8: warning: extra tokens at end of #endif directive [-Wextra-tokens]
+#endif PAYMENT_HPP
+       ^
+       //
+In file included from ./cashpayment.hpp:4:
+./payment.hpp:6:27: error: expected class name
+class CashPayment: public Payment
+                          ^
+./payment.hpp:16:1: error: extraneous closing brace ('}')
+};
+^
+./payment.hpp:17:8: warning: extra tokens at end of #endif directive [-Wextra-tokens]
+#endif PAYMENT_HPP
+       ^
+       //
+./cashpayment.hpp:6:7: error: redefinition of 'CashPayment'
+class CashPayment: public Payment
+      ^
+./payment.hpp:6:7: note: previous definition is here
+class CashPayment: public Payment
+      ^
+./cashpayment.hpp:6:27: error: expected class name
+class CashPayment: public Payment
+                          ^
+./cashpayment.hpp:17:8: warning: extra tokens at end of #endif directive [-Wextra-tokens]
+#endif CASHPAYMENT_HPP
+       ^
+       //
+3 warnings and 4 errors generated.
